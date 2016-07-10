@@ -1,0 +1,146 @@
+% Created 2016-06-30 四 20:08
+
+\documentclass{article}
+\usepackage[
+a4paper,
+headheight=12pt,
+paperwidth=210mm,
+headsep=20pt,
+includeheadfoot,
+centering,
+top=0.5cm,
+bottom=1cm,
+left=3cm
+]{geometry}
+
+%\Usepackage{pdflatex}
+
+
+\usepackage{xeCJK}  %
+
+%\usepackage{fontspec}
+%\setromanfont{Microsoft Sans Serif}
+\usepackage{fontspec,xunicode,xltxtra}
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}                                                       
+\setmonofont{Times}                                                     
+%\newcommand\fontnamemono{STXihei}                                            
+\newfontinstance\MONO{\fontnamemono}                                        
+\newcommand{\mono}[1]{{\MONO #1}}                                           
+\setCJKmainfont[BoldFont=STHeiti, ItalicFont=STKaiti]{STSong}%中文字体        
+\setCJKsansfont{STHeiti}                                                      
+\setCJKmonofont{STFangsong} 
+
+
+\newcommand\fontnamehei{STHeiti}
+\newcommand\fontnamesong{STSong}
+\newcommand\fontnamekai{STKaiti}
+\newcommand\fontnamefangsong{STFangsong}
+\setCJKfamilyfont{kai}{\fontnamekai}
+\setCJKfamilyfont{hei}{\fontnamehei}
+\setCJKfamilyfont{song}{\fontnamesong}
+\setCJKfamilyfont{fs}{\fontnamefangsong}
+
+\newcommand{\song}{\CJKfamily{song}}    % 宋体
+\newcommand{\fs}{\CJKfamily{fs}}             % 仿宋体
+\newcommand{\kai}{\CJKfamily{kai}}          % 楷体
+\newcommand{\hei}{\CJKfamily{hei}}         % 黑体
+
+
+\newcommand{\yihao}{\fontsize{26pt}{36pt}\selectfont}           % 一号, 1.4 倍行距
+\newcommand{\erhao}{\fontsize{22pt}{28pt}\selectfont}          % 二号, 1.25倍行距
+\newcommand{\xiaoer}{\fontsize{18pt}{18pt}\selectfont}          % 小二, 单倍行距
+\newcommand{\sanhao}{\fontsize{16pt}{24pt}\selectfont}        % 三号, 1.5倍行距
+\newcommand{\xiaosan}{\fontsize{15pt}{22pt}\selectfont}        % 小三, 1.5倍行距
+\newcommand{\sihao}{\fontsize{14pt}{21pt}\selectfont}            % 四号, 1.5 倍行距
+\newcommand{\banxiaosi}{\fontsize{13pt}{19.5pt}\selectfont}    % 半小四, 1.5倍行距
+\newcommand{\xiaosi}{\fontsize{12pt}{18pt}\selectfont}            % 小四, 1.5倍行距
+\newcommand{\dawuhao}{\fontsize{11pt}{11pt}\selectfont}       % 大五号, 单倍行距
+\newcommand{\wuhao}{\fontsize{10.5pt}{15.75pt}\selectfont}    % 五号, 单倍行距
+
+\usepackage{etoolbox}  % Quote 部份的字型設定
+\newfontfamily\quotefont{Songti SC}
+\AtBeginEnvironment{quote}{\quotefont\small}
+
+\XeTeXlinebreaklocale ``zh''
+\XeTeXlinebreakskip = 0pt plus 1pt
+\linespread{1.391}
+%首行缩进
+\usepackage{indentfirst}
+\setlength{\parindent}{0.75cm}
+%\addtolength{\parskip}{3pt}
+
+\parskip=0bp plus 10bp minus 1bp %段距为最大10磅,仅为行距一半,最小可以压缩1磅。
+\raggedbottom
+
+%设置调用图表宏包
+\usepackage[format=hang,labelsep=space]{caption}
+\intextsep=6bp %段距为最大10磅,仅为行距一半,最小可以压缩1磅。
+\textfloatsep=6bp %设置浮动体在页面顶端或底端时多个之间的距离
+\floatsep=6bp %分别设置表和图的标题与正文的距离
+\captionsetup[figure]{aboveskip=0bp,belowskip=0bp}
+\captionsetup[table]{aboveskip=0bp,belowskip=6bp}
+
+%设置图表说明
+\usepackage{booktabs,tabularx,threeparttable,longtable}
+%\renewcommand{\thefigure}{(+ 0 org-level-1)\textendash\arabic{figure}}
+%\renewcommand{\thetable}{'org-level-1\textendash\arabic{table}}
+%
+\usepackage[below]{placeins}
+\usepackage{flafter}
+
+%\usepackage{indentfirst}
+%\setlength{\parindent}{2em}
+
+
+% [FIXME] ox-latex 的設計不良導致 hypersetup 必須在這裡插入
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true, %把紅框框移掉改用字體顏色不同來顯示連結
+  linkcolor=blue, %[rgb]{0,0.37,0.53},
+  citecolor=magenta, %[rgb]{0,0.47,0.68},
+  filecolor=yellow, %[rgb]{0,0.37,0.53},
+  urlcolor=red, %[rgb]{0,0.37,0.53},
+  pagebackref=true,
+  linktoc=all,}
+
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{adjmulticol}
+\usepackage{amssymb}
+\tolerance=1000
+\author{姓名：刘福雁\thanks{liufuyan15@mails.ucas.ac.cn}}
+\date{学号：201518000907060}
+\title{对机器学习及人工智能的思考}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\kai\xiaosi\noindent 注：笔者是一位非计算机专业(凝聚态物理)的学生，本文是笔者在阅读了一些机器学习方面的资料后，整理的一些读书笔记。
+
+\song\banxiaosi  大家都知道，在今 年 3 月,在韩国首尔举行的谷歌 DeepMind 围棋挑战赛,人 工智能围棋软件 ALphaGo 以 4:1 战胜了 韩国棋手李世乭九段。无论是支持李世乭的看客还是抱着好奇态度支持ALphaGo的旁观者都大吃一惊。以至于近半年来关 于人工智能和机器学习的话题迅速升 温,引起了社会各界的关心。ALphaGo是机器学习的一个案例。而机器学习是人工智能的一个分支学科,主要研究的是让机器从过去的经 历中学习经验,对数据的不确定性进行 建模,在未来进行预测。在机器学习领域，通常有四种算法：有监督学习、半监督学习、无监督学习和增强学习。这里提到的有没有“监督”指的是机器的学习阶段，能否看到被提供样本的标签特征，这些标签特征可以认为是人类本来就知道的提供的这些样本的属性。
+
+除了前面提到的四 大类算法,机器学习还 有很多有趣的子领域。在大数据时代,机器学习领域有 一个热点是把系统与算法结合,设计大 规模分布式的机器学习算法与系统,使 得机器学习算法可以在多处理器和多 机器的集群环境下作业,处理更大量级 的数据。笔者认为：未来的物理实验会得到越来越多的数据，最终我们探测这个世界以及宇宙只会得到大量有用或者无用的数据，而计算机发展的速度远远不及数据膨胀的速度，也就是说，即便我们拥有大自然给我们的启迪————“数据”，我们也无法揭开其中的奥秘。因此未来的世界我们需要更快处理速度的计算机。已然，目前为止，计算机不在是一个独立的学科，在 大数据的背景下,计算机科学正逐渐演变 成一个越来越强调跨领域合作的学 科。如何有效地把系统和机器学习方 法相结合来处理海量数据,这将是未来 人工智能和计算机科学发展的关键。
+
+人工智能的发展时如此迅速，我们今天利用人工智能可以完成很多工作。甚至可以说，没有人工智能，我们寸步难行。但是自打人工智能的产品问世以来，对人工智能担忧的声音从来不绝于耳。我们应该走向哪里，人工智能又会发生什么？笔者读到的一个很有趣的回答是：美国乔治亚理工大学机器学习助理教 授Le Song认为这种论断具有基本的逻 辑错误,因为古今中外,会下围棋并不 代表能统治世界,绝大多数的国家领导 人也都不是围棋棋手。从事实出发谷 歌的 ALphaGo 系统仅仅是在人类棋谱 上训练而成的计算机围棋软件系统,其 根本不具有理解人类语言、图片和推理 等其他机器智能。并且ALphaGo的背后是几十名谷歌工程师的辛苦工作，涉及算法和调试程序的反复迭代，才取得的成果。也就是说ALphaGo本身是科学家智慧的结晶。
+
+当然，这种回复是不具有说服力的，这只是从基本的语言逻辑上做了分析。但是可能未来的人工智能产品可以掌握人类的某些思想特征，从而具有一定的推理，判断，预测的思考及学习能力，那我们又该怎么管理这些人工智能呢。因此，笔者认为对待人工智能人类应强调其利于人类的优点，而抑制其违背人类思想的缺点。但是我们不得不承认，这些担心目前来说有些多余，我们面临的实际情况是：对于自然语言理解,虽然经过了数十年的发 展,依然没有人工智能系统可以做到完 全正确地理解人类的语言;在机器人领域,即使工 业机器人发展迅速,我们依然没有看到 具有常识和推理能力的智能家庭机器 人;在计算机视觉领域,即使我们在人 脸识别和图片分类上取得了不小的成 就,但是对于关系理解和完整的场景认 知,现在系统能做到的还很有限。对人工智能的开发，何尝不是人类对自己本身的认识和研究，而人类作为大自然的一部分，又是一环扣一环缠绕在一起的，也许我们对自身的研究需要各个学科的综合应用，如自然科学提供的自然基本原理，神经科学提供的基本的神经模式，心理学提供的人类对外界环境的基本反应模式等。所以机器学习或者人工智能不是单纯的一个独立的学科，是一门综合性学科，就现在的这些基本学科发展而言，没有任何一门学科已经对本领域的内容研究地很透彻（包括物理学），更别说是交叉学科了。
+
+总而言之,现代社会是人工智能发展的 一个令人兴奋的时期,机器学习技术对 于整个人类的发展,也是具有不可估量 的潜力。我们应该继续完善各个学科以及交叉学科的发展，并且正视科学技术发展 的进步,理性看待利用科学取得的结果。
+% Emacs 24.5.1 (Org mode 8.2.10)
+\end{document}

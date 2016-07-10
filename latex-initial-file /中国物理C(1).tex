@@ -1,0 +1,148 @@
+
+\documentclass[a4paper,10pt,twoside]{cpc-hepnp}
+\usepackage{CJK,upgreek,fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amssymb,bm,mathrsfs,bbm,amscd}
+\usepackage[tbtags]{amsmath}
+\usepackage{cite}
+\usepackage{lastpage}
+\usepackage{ifthen}
+\usepackage[top=2cm, bottom=1in, left=0.6in, right=0.6in]{geometry}
+\newboolean{first}
+\setboolean{first}{true}
+%\newcommand{\song}{\CJKfamily{song}}
+%\newcommand{\hei}{\CJKfamily{hei}}
+%\newcommand{\fs}{\CJKfamily{fs}}
+%\newcommand{\kai}{\CJKfamily{kai}}
+
+\begin{document}
+\newcommand{\makeheadrule}{%
+\makebox[0pt][l]{\rule[0.55\baselineskip]{\headwidth}{0.4pt}}%
+\rule[0.7\baselineskip]{\headwidth}{0.4pt}}
+\renewcommand{\headrule}{%
+{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\makeheadrule}}
+\makeatother\begin{CJK*}{GB}{gbsn}
+
+\fancyhead[l]{\small Chinese Physics C(HEP \& NP)}
+\fancyhead[r]{\small Vol. 32, No.10,  Jun., 2016}
+%\fancyfoot[C]{\small 010201-\thepage}
+
+\footnotetext[0]{Received 6 July 2016}
+
+
+
+
+\title{\Large\bf Preliminary study of residual orbit \\oscillation in BEPCII}
+
+\author{%
+ ZHANG Qi(ÕÅç÷)$^{1)}$\email{zhangqi15@mails.ucas.ac.cn}%
+ \\ \footnotesize(Institute of High Energy Physics, CAS, Beijing 100049, China)
+}
+\maketitle
+
+%\thispagestyle
+\vspace{0.1cm}
+\begin{abstract}
+BEPCII has two rings each with an injection system. The injection system of each ring consists of two kicker magnets and a septum magnet. The injection layout of two rings is the same. Both two kickers would kick the beam in horizontal plane. The betatron phase advance in the horizontal plane between two kickers is designed exactly in order to reduce the perturbation to the circulating beams during injection. In fact, the residual orbit oscillation will originate because of the existence of a variety of errors. The Librea Electron BPM processor is used to acquire the beam position data in turn-by-turn mode and to analyze the residual orbit oscillation. According to the measurement results, minimization of the residual orbit oscillation can be done by adjusting the peak field strength and trigger timing delay of two kickers. With very small residual orbit oscillation the two beams can keep collision condition during the injection.
+\end{abstract}
+\vspace{0.3cm}
+
+\begin{keyword}
+local orbit bump, residual orbit oscillation, turn-by-turn
+\end{keyword}
+\vspace{0.03cm}
+\begin{pacs}
+29.27.Ac, 29.20.db
+\end{pacs}
+
+\vspace{0.1cm}
+
+\begin{multicols}{2}
+
+\section{Introduction}
+
+BEPCII is an electron-positron collider with two storage rings. Each ring has an injection system which consists of two kicker magnets and a septum magnet$^{\scriptsize\citep{lab1}} $.The injection layout of two rings is the same. Taking one injection system as an example, the two kickers are located in the suitable places which give a betatron phase advance of between two kicker magnets. The two kickers give a local orbit bump to the circulating beam, so that the injecting beam is close enough to the circulating beam. The septum magnet is used to isolate the injecting beam from the circulating beam. At the same time it detects the injecting beam with a certain angle to the horizontal plane of the circulating beam. So the injecting beam can be accepted by the ring. Fig. 1 shows the schematic diagram of the injection system.
+
+In the ideal case the orbit of the circulating beam outside the local orbit bump would not be impacted by the kickers. However, residual orbit oscillation will originate outside the local bump because of the existence of a variety of errors. Large residual orbit oscillation will degrade the performance of the circulating beam in the ring. It is necessary to minimize the residual orbit oscillation.
+
+\begin{center}
+\includegraphics[width=6cm,height=3cm]{01.png}
+\figcaption{\label{fig1}   Scheme of the injection system in BEPCII. }
+\end{center}
+
+As shown in Fig. 2, there are two important parameters regarding a kicker which have an effect on the beam. One is the output voltage of the kicker power supply (peak feld strength of the kicker) and the other is the discharge trigger timing delay. By tuning those two parameters of each kicker, the minimized residual orbit oscillation can be found. Librea Electron BPM processor is used to measure the residual orbit oscillation.
+
+\begin{center}
+\includegraphics[width=6cm]{02.png}
+\figcaption{\label{fig1}   Field waveform and timing delay of a kicker.}
+\end{center}
+
+
+\section{Libera BPM system}
+Libera Electron BPM (Beam Position Monitor) processor $^{\scriptsize\citep{lab2}}$ (hereinafter named Libera BPM) is used to acquire the data of the beam position. Libera BPM is an all-in-one product of Instrumentation Technologies Company. It has been widely used in the field of accelerator beam diagnostics.
+
+In the storage ring of BEPCII, a total of 16 Libera BPM modules are used. The Libera control platform is located in the central control room. The control of Libera and data acquisition is implemented through LAN. The BEPC/ event timing system provides the data acquisition trigger signal through EVG/EVR $^{\scriptsize\citep{lab3}}$ modules. Then the synchronization of acquiring data in different Liberas is realized by the clock signal splitter. Each Libera has an internal VXCO ADC sampling clock. The revolution frequency, which is divided by harmonic number from the ring RF frequency, is used to lock with the ADC sampling clock. The turn-by-turn data acquired by Libera are thus exact at the revolution frequency of the storage ring. The synchronization of the ADC sampling with different Liberas is also realized by the clock signal splitter. Fig. 3 shows the block diagram of the Libera BPM system.
+\end{multicols}
+
+\begin{center}
+\includegraphics[width=12cm]{03.png}
+\figcaption{\label{fig1}   Block diagram of Libera BPM system in BEPCII.}
+\end{center}
+
+\begin{multicols}{2}
+
+\begin{center}
+\includegraphics[width=6cm]{04.png}
+\figcaption{\label{fig1}   Comparison of the betatron oscillation amplitude before and after kicking.}
+\end{center}
+
+Libera BPM offers a data path which is in turn- by-turn mode. The data are acquired precisely at the beam revolution frequency. A data acquisition trigger signal, which is earlier than the kicker trigger signal, is sent to the Libera. So the data of beam position before and after the kicker kicks the beam can be acquired. Fig. 4 shows the details.
+
+\section{Experimental results}
+\subsection{Data processing}
+
+All experiments are done under the condition of single-bunch injection. 15360 turns of beam position data can be acquired by using Libera at the injection repetition rate. Fig. 5 shows all beam position data of 15360 turns. 
+The amplitude of the residual orbit oscillation can be calculated by selecting the beam position data of the first 200 turns after the beam is excited by kickers. For the x direction we have
+\begin{equation*}
+\sigma_x=\sqrt{\sum_{i=n}^{n+200}\frac{(x_i-\bar{x})^2}{200-1}},   \quad \bar{x}=\frac{\sum_{i=n}^{n+200}x_i}{200}
+\end{equation*}
+
+The notation \(n\) herein represents the number of turns where the beam starts to be kicked by the kickers.\(\sigma_x\) in the formula is the standard deviation of the horizontal beam position of 200 turns. In the same way, it is easy to calculate the amplitude of the residual orbit oscillation in the \(y\) direction.
+
+\begin{center}
+\includegraphics[width=6cm]{05.png}
+\figcaption{\label{fig1}   The betatron oscillation in x direction after the kicker kicks the beam.}
+\end{center}
+
+\subsection{The overview of injection with the best match of two kickers}
+
+When the BEPCII storage rings operate in the colliding mode, the harmonic number is 396. So 396 bunches can be injected. If the injection bucket number is changed, the trigger timing delay of kickers will be also changed. As the bottom width of field wave- form of the kicker is about 600 ns $^{\scriptsize\citep{lab1}}$ , the kicker magnet kicks not only the bunch in the injection bucket, but also the bunches in the adjacent buckets. So if the trigger timing delay between the two kickers or the ratio of peak field strengths of the two kickers is not suitable, the bunches in some buckets might be lost.
+
+This experiment is performed as follows: first to inject one bunch into the bucket No.0, and then change the injection bucket number (or trigger tim- ing delay of the kickers) step by step. At each step the amplitude of the residual orbit oscillation is mea- sured. If the amplitude of the residual orbit oscillation for any bucket is not minimized, that means the parameters of the two kickers are not optimized. According to the turn-by-turn data of Libera, the perfect match of two kickers is found at last.
+
+Figure 6 shows the results of residual orbit oscillation of the bunch in the bucket No.0. From the figure, it can be seen that the residual orbit oscillation amplitude is almost close to the background level of the beam position of about 0.095 mm which is measured when the two kickers are turned off. A test of injecting 80 bunches into one of the rings has been done. The bunch spacing is 8 ns and there is a 36 ns gap between the bunches of No. 40 and No. 41. During the test, the bunch current in different buckets can be monitored by BCM $^{\scriptsize\citep{lab4}}$ (Bunch Current Monitor). 
+
+The beam loss caused by the injection kickers does not occur during the multi-injection process. A small perturbation outside the injection region makes the top-up injection possible in BEPCII.
+
+\section{Conclusion}
+
+The aim of studying the residual orbit oscillation is to optimize the parameters of two injection kickers. The decrease of residual orbit oscillation can make the multi-bunch injection more efficient. The Libera BPM provides a useful tool to study the injection system of the BEPCII storage rings.
+
+
+\end{multicols}
+\vspace{-4mm}
+\centerline{\rule{80mm}{0.1pt}}
+
+
+\begin{multicols}{2}
+\footnotesize
+\bibliographystyle{unsrt}
+\bibliography{dajie}
+
+\end{multicols}
+\clearpage
+\end{CJK*}
+\end{document}
