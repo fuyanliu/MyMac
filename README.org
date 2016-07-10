@@ -1,0 +1,5 @@
+* latex-initial-file folder
+1. *中国物理C(1).tex* 是在完成英语学术论文写作时，试着写学术论文PDF的原始tex文件；
+2. *media.tex* 是完成多媒体课程时要交的作业的原始tex文件；
+3. *emacs_keys.tex* 是总结emacs快捷键时写的tex文件；
+4. *cpc-hepnp.cls* 是完成学术论文写作要的模版，此模版需放在latex的根目录，Mac上的目录为 */usr/local/texlive/2015/texmf-dist/tex/latex/base/* .
