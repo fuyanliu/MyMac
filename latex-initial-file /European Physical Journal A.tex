@@ -1,0 +1,212 @@
+\documentclass[12pt,epsf]{article}
+\usepackage{multicol}%??
+\usepackage{indentfirst}%????
+\usepackage{amsmath}%???????????
+\usepackage{fancyhdr}%???????
+\pagestyle{myheadings}%????????myheadings??????????????????????
+\usepackage{booktabs}%????????????????
+\usepackage{subfigure}%?????????????? figure ? table ??????????????????????????????????????????????? Figure 1(a), 1(b), 1(c),..., ???????? \subfigure ???????????? \subtable ???????????
+\usepackage{xcolor,graphicx} %???????????
+\usepackage{float}%floatflt ????? floatingfigure ? floatingtable ?????????????????????????
+\usepackage[format=hang,labelsep=space]{caption}%??????????
+\captionsetup[figure]{aboveskip=0bp,belowskip=-20bp}%???????????
+\captionsetup[table]{aboveskip=-0bp,belowskip=0bp}%???????????
+\usepackage{abstract}%???????
+\usepackage{longtable}%????????
+\usepackage{setspace}%?????????
+\renewcommand{\abstractname}{}%????abstract??????
+\usepackage[justification=centering]{caption}%????????
+\captionsetup{font={footnotesize}}%?????????
+\usepackage{cite}
+\usepackage[center]{titlesec}%?????????????????????
+\makeatletter%??@????????
+\renewcommand\thesection {\small \@Roman\c@section .}%??????????????????
+\renewcommand\thetable {\footnotesize \@Roman\c@table :}%????????????????????
+\renewcommand\thefigure {\footnotesize \@Roman\c@figure :}%????????????????????
+\makeatletter%??
+\setlength{\textwidth}{16cm}%??????
+\setlength{\textheight}{25cm}%??????
+\usepackage[top=2cm, bottom=1in, left=0.6in, right=0.6in]{geometry}%??geometry???????????????????
+\setlength{\columnsep}{1pc}%?????????
+\newcommand{\xiaosi}{\fontsize{12pt}{14.4pt}\selectfont}
+
+\begin{document}
+\newgeometry{top=0.3cm, bottom=1in, left=0.6in, right=0.6in}%?????????????????????????\restoregeometry????
+\title{\large \bf \vskip1.0cm Magnetic properties of ground-state mesons}
+\author{\small Yang Shuangli\footnote{Email: yangshuangli15@mails.ucas.ac.cn}\\ \it \small Institute of High Energy Physics}
+\date{(\small Dated: \small \today)}
+\maketitle
+\thispagestyle{empty}%???????????
+
+\vspace{-4.5pc}%?????????????
+\begin{abstract}
+Starting with the bag model a method for the study of the magnetic properties (magnetic moments, magnetic dipole transition widths) of ground-state mesons is developed. We calculate the M1 transition moments and use them subsequently to estimate the corresponding decay widths.
+\\ \noindent Keywords: bag model, magnetic moments, decay widths, heavy mesons
+\end{abstract}
+
+\begin{multicols}{2}%????
+\section{\small\bf INTRODUCTION}
+
+The magnetic moments are among the fundamental properties of every hadron.They play an important role in the understanding of the hadronic structure. For instance, it can be obtained by the extrapolation of the magnetic form factor \( G_M(Q^2) \) to zero momentum transfer.Because of the short lifetime the direct measurement of the magnetic moments of vector mesons seems to be hardly possible.
+
+Hence, these magnetic properties of hadrons are closely related, and, if we succeeded in predicting M1 decay rates, we would get some confidence that the predictions for magnetic moments were also reliable.
+
+The remainder of the paper is as follows. In sect. II the short description of our version of the bag model is given, and the formalism we use to treat the magnetic properties of the hadrons is presented. In sect. III the predictions for the M1 transitions moments and partial decay widths are given. They are compared with the results obtained in other approaches and with experimental data. Our predictions for the magnetic moments of ground-state vector mesons are presented in sect. IV. The last section serves for the summary and discussion.
+
+\section{\small\bf BAG MODEL AND MAGNETIC OBSERVABLES}
+
+The MIT bag model in the static cavity approximation \cite{Pritchett:1971np} is a simple intuitive approach to hadron structure (see also the excellent review \cite{Ishida:1979tw}). 
+
+It is assumed that quarks are conected in the sphere of radius \(R\),within which they obey the free Dirac equation. The four-component wave function of the quark in the \(s\)-mode is given by
+\begin{equation}
+  \Psi^{1/2}_m(r)=\frac{1}{\sqrt{4\pi}} 
+ \begin{pmatrix} 
+ G(r)\\-i(\sigma\cdot\ \hat{\mathtt{r}})F(r)
+ \end{pmatrix}\\
+ \Phi^{1/2}_m {\tiny{,}}
+\end{equation}
+where \(\Phi^{1/2}_m\) is two-component spinor, \(\sigma\) are usual Pauli matrices, and \(\hat{\mathtt{r}}\) is unit radius-vector. Solutions of the free Dirac equation in the spherical coordinate system are simple Bessel functions, so that
+\begin{equation}
+G(r)=Nj_0(pr) ,
+\end{equation}
+The energy of the bag associated with a particular hadron is given by
+\begin{equation}
+E=\frac{4\pi}{3}BR^3+ \sum\limits_{i} \varepsilon_i +E_{int}
+\end{equation}
+where \(R\) denotes the bag radius, and \(B\) is the bag constant. 
+\end{multicols}%????????\restoregeometry?????????
+\restoregeometry%????\newgeometry{top=0.3cm}??????????????????
+\begin{multicols}{2}%??????
+%\noindent 
+\begin{table}[H]
+\begin{center}
+\renewcommand{\tablename}{TABLE}%????????Table?TABLE
+\caption{\footnotesize Spin-flavor content of ground-state mesons.}
+\begin{tabular}{ccc}
+\toprule
+ {Flavor content} &{ \(J=0\)} & \(J=1\) \\
+ \midrule
+  \(-u\bar{d}\) & \(\pi^+\) & \(\rho^+\)\\ 
+  \(u\bar{s}\) & \(K^+\) & \(K^{*+}\)\\
+  \(d\bar{s}\) & \(K^0\) & \(K^{*0}\)\\
+  \(-s\bar{s}\) & \(\eta_0\) & \(\phi_s\)\\
+  \(c\bar{d}\) & \(D^+\) & \(D^{*+}\)\\
+  \(c\bar{u}\) & \(D^0\) & \(D^{*0}\)\\
+  \(c\bar{s}\) & \(D^+_s\) & \(D^{*+}_s\)\\
+  \(c\bar{c}\) & \(\eta_c\) & \(J/\psi\)\\ 
+  \(u\bar{b}\) & \(B^+\) & \(B^{*+}\)\\
+  \(d\bar{b}\) & \(B^0\) & \(B^{*0}\)\\ 
+ \bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Actually we do not know if we can use for the strange quarks the same scale factor that was adjusted for the lightest (\(u\) and \(d\)) quarks and for the bottom quarks the same scale factor that was adjusted for the charmed quarks. 
+\section{\small\bf MAGNETIC DIPOLE TRANSITIONS}
+
+First, for convenience, we present in table I the quark- antiquark structure of s-state mesons.
+
+We assume the physical states of pseudoscalar (\(\eta\), \(\eta'\)) and vector (\(\omega^0\), \(\phi\)) mesons to be the mixtures of the (\(\eta_l\), \(\eta_s\)) and (\(\omega_l\), \(\phi_s\)) states.In sect. They are compared with the results obtained in other approaches and with experimental data. 
+\begin{equation}
+\begin{split}
+\eta=-\eta_l sin\alpha_P+\eta_s cos\alpha_P, \\
+\eta'=\eta_l cos\alpha_P+\eta_s sin\alpha_P,\\
+\end{split} 
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\omega^0=\omega_l cos\alpha_V+\phi_s sin\alpha_V, \\
+\phi=-\omega_l sin\alpha_V+\phi_s cos\alpha_V,\\
+\end{split} 
+\end{equation}
+Definitions of the mixed states and phase systems of the wave functions used by various authors may differ.  Ours are the same as in ref. \cite{Navarro:1984ha}. See Fig. \ref{Magnetic} 
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=8cm]{Magnetic.png}
+  \renewcommand{\figurename}{Fig.}%????????Figure?FIGURE
+  \caption{\footnotesize Magnetic moments of heavy mesons and ratios of these magnetic moments to that of the proton.}\label{Magnetic}%?\ref{}????
+\end{center}
+\end{figure}
+
+%\\The uncertainties for the magnetic moments are estimated to be of the same order as for transition moments.In the light meson sector the reasonable estimate of possible error could be about 5 of percent . We see that the values of the magnetic moments predicted using our extended version of the bag model are appreciably smaller than nonrelativistic results. For all other magnetic moments of heavy mesons the possible uncertainty is expected to be smaller than 5 of percent. For comparison we have presented these ratios together with ours in the two last columns of table X. 
+
+\section{\small\bf DISCUSSION AND SUMMARY}
+
+\xiaosi In order to test the method we have compared our predictions for M1 transition moments and partial decay widths with the experimental data and with the results obtained using other approaches. We have found a satisfactory agreement with experiment and, to some extent, with other theoretical predictions. Nevertheless, some aspects concerning the heavy meson sector are not completely clear. 
+\begin{center}
+\vskip1.0cm{\bf Acknowledgment}
+\end{center}
+
+The author is indebted to A. Deltuva for the support and valuable advices.
+\end{multicols}
+%?????????????
+\begin{center}
+\noindent\rule{8cm}{1pt}
+\vskip -0.5cm
+\noindent\rule{4cm}{1.5pt}
+\vskip -0.5cm
+\noindent\rule{2cm}{1.8pt}
+\end{center}
+
+\begin{multicols}{2}
+
+%\begin{spacing}{0.7}%??setsapce??????????1???????\renewcommand{\baselinestretch}{}??????
+\renewcommand\refname{\vspace*{-1.5em}}%??Reference??
+\renewcommand{\baselinestretch}{0.7}
+
+%??????????????????bibrex???????.bbl???????????\begin{thebibliography}...\end{thebibliography}???????????????????????????Reference??
+
+%\footnotesize
+%\bibliographystyle{plain}
+ %\bibliography{myfile}
+
+\begin{thebibliography}{1}
+\footnotesize%??.blb??????????????????
+\addtolength{\itemsep}{-4.6mm}%??.blb?????????????????????????
+\bibitem{Ishida:1979tw}
+S.~Ishida, K.~Takeuchi, S.~Tsuruta, M.~Watanabe, and M.~Oda.
+\newblock {Electromagnetic Interactions of Hadrons In The Relativistic Harmonic
+  Oscillator Quark Model}.
+\newblock {\em Phys. Rev.}, D20:2906--2922, 1979.
+
+\bibitem{Navarro:1984ha}
+J.~Navarro and V.~Vento.
+\newblock {A Nonrelativistic Quark Model for Baryons With Pion Cloud}.
+\newblock {\em Nucl. Phys.}, A440:617--635, 1985.
+
+\bibitem{Pritchett:1971np}
+P.~L. Pritchett and J.~D. Walecka.
+\newblock {Model for Electron Excitation of the Nucleon. 2.}
+\newblock {\em Phys. Rev.}, 168:1638--1661, 1968.
+\newblock [Erratum: Phys. Rev.D4,1582(1971)].
+
+\end{thebibliography}
+
+%\end{spacing}
+
+
+ \end{multicols}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
